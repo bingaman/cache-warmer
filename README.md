@@ -1,4 +1,5 @@
 # Bash commands for warming cloudfront in prep for launching netX at the Art Institute of Chicago
+# I'm using csvkit to deal with the csv, I'm not using awk because it's painful to use with csv. csvkit is available from homebrew.
 
 # Get a randomized list of ids from 10000 most popular images
 csvcut -c 4 -K 1 top-images.csv |sort -R>idlist-rand.txt
